@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddy's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(90deg, #333, #555);
+            color: white;
+            padding: 1.5em 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        main {
+            padding: 2em 10%;
+            background: url('background.jpg') no-repeat center center/cover;
+            flex: 1;
+        }
+
+        section {
+            margin-bottom: 3em;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .project, .experience {
+            background-color: #fff;
+            padding: 1.5em;
+            margin-bottom: 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 0.75em;
+            margin-bottom: 1.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #555;
+            outline: none;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #555;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 2em 5%;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 1em 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h1>Welcome to Buddy's Portfolio</h1>
+            <p>Step into my world of web development. Here you'll find a collection of my best work, my skills, and my passion for coding.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi there! I'm Buddy, a dedicated front-end web developer with a keen interest in becoming a full-stack developer. I thrive on creating beautiful, functional websites and continually learning new technologies. Let's create something extraordinary together!</p>
+        </section>
+
+        <section id="projects">
+            <h2>Project Types</h2>
+            <div class="project">
+                <h3>Portfolio Websites</h3>
+                <p>Showcase your talents with stunning portfolio websites that highlight your skills and projects.</p>
+            </div>
+            <div class="project">
+                <h3>Music Websites</h3>
+                <p>Engage your audience with dynamic music websites tailored to your specific needs and style.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience">
+                <h3>HTML & CSS</h3>
+                <p>Expert in crafting responsive, visually appealing web pages using HTML and CSS.</p>
+            </div>
+            <div class="experience">
+                <h3>JavaScript</h3>
+                <p>Proficient in using JavaScript to create interactive, dynamic web experiences.</p>
+            </div>
+            <div class="experience">
+                <h3>Additional Experience</h3>
+                <p>Participated in local hackathons, tutored HTML/CSS, and provided web development services to clients for free.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Buddy's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contact-form');
+            
+            contactForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                alert(`Thank you, ${name}! Your message has been sent.`);
+                
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
